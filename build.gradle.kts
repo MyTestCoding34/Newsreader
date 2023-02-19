@@ -12,6 +12,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("com.squareup.okhttp3:okhttp:3.10.0")
+    implementation ("com.google.code.gson:gson:2.8.9")
 }
 
 tasks.test {
@@ -19,9 +21,9 @@ tasks.test {
 }
 
 kotlin {
-    jvmToolchain(8)
+    jvmToolchain(17)
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("ru.romalapp.presentation.Main")
 }
