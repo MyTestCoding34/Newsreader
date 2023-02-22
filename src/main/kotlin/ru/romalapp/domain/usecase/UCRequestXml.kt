@@ -7,7 +7,7 @@ import ru.romalapp.domain.models.EUrl
 Класс для получения ответа от сервера в формате xml или ошибки
  */
 class UCRequestXml {
-    fun executeAPI(): DReturnAnswerData {
+    fun execute(): DReturnAnswerData {
         return MyRequestAPIImpl().execute(EUrl.XML)
     }
 }

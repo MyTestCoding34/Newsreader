@@ -7,7 +7,7 @@ import ru.romalapp.domain.models.EUrl
 Класс для получения ответа от сервера в формате Json или ошибки
  */
 class UCRequestJson {
-    fun executeAPI(): DReturnAnswerData {
+    fun execute(): DReturnAnswerData {
         return MyRequestAPIImpl().execute(EUrl.JSON)
     }
 }

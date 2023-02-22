@@ -3,7 +3,9 @@ package ru.romalapp.presentation
 
 import ru.romalapp.domain.models.DReturnAnswerData
 import ru.romalapp.domain.usecase.UCParserJson
+import ru.romalapp.domain.usecase.UCParserXml
 import ru.romalapp.domain.usecase.UCRequestJson
+import ru.romalapp.domain.usecase.UCRequestXml
 
 fun main() {
 
@@ -18,7 +20,18 @@ fun main() {
         inputText = readlnOrNull().toString()
        if (inputText == "1"){
            println("Выполняется запрос...")
-            answerData = UCRequestJson().executeAPI()
+            answerData = UCRequestJson().execute()
+            answerDataText = answerData.answerData
+            if (!answerData.isError){
+                inputText = "next"
+            }
+            else{
+                println(answerDataText)
+            }
+        }
+        else if (inputText == "2"){
+            println("Выполняется запрос...")
+            answerData = UCRequestXml().execute()
             answerDataText = answerData.answerData
             if (!answerData.isError){
                 inputText = "next"
@@ -28,19 +41,33 @@ fun main() {
             }
         }
 
+
         if (inputText == "next")
             break
     }
+//    while (inputText != "exit") {
+//        println("1 - вывести все новости, 2 - поиск по keyword")
+//        inputText = readlnOrNull().toString()
+//        if (inputText == "1"){
+//            UCParserJson().execute(answerDataText)
+//        }
+//        else if ( inputText == "2"){
+//            println("Введите слова для поиска")
+//            inputText = readlnOrNull().toString()
+//            UCParserJson().execute(answerDataText, inputText)
+//        }
+//    }
+
     while (inputText != "exit") {
         println("1 - вывести все новости, 2 - поиск по keyword")
         inputText = readlnOrNull().toString()
         if (inputText == "1"){
-            UCParserJson().parserJSONToList(answerDataText)
+            UCParserXml().execute(answerDataText)
         }
         else if ( inputText == "2"){
             println("Введите слова для поиска")
             inputText = readlnOrNull().toString()
-            UCParserJson().parserJSONToList(answerDataText, inputText)
+            UCParserXml().execute(answerDataText, inputText)
         }
     }
 }

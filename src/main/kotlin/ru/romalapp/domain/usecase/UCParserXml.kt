@@ -1,25 +1,16 @@
 package ru.romalapp.domain.usecase
 
-import com.google.gson.Gson
-import com.google.gson.JsonParseException
-import ru.romalapp.domain.models.DJSONRoot
+
+import com.fasterxml.jackson.dataformat.xml.XmlMapper
+import ru.romalapp.domain.models.DXMLRoot
 import java.text.SimpleDateFormat
 import java.util.*
 
-class UCParserJson {
-    fun execute(jsonString: String, keyword: String = "") {
-        val gson = Gson()
-        val dJsonRoot: DJSONRoot
-        try {
-            dJsonRoot = gson.fromJson(jsonString, DJSONRoot::class.java)
-        } catch (e: JsonParseException) {
-            println("Что то пошло не так! Крашнулся парсер Json!")
-            println()
-            return
-        }
-
-//        val sortNews = dJsonRoot.news.sortedBy { news -> news.date }
-        val sortNews = dJsonRoot.news.filter { it.visible && (keyword == "" || it.keywords.contains(keyword)) }
+class UCParserXml {
+    fun execute(xmlString: String, keyword: String = "") {
+        val mapper = XmlMapper()
+        val xmlRoot = mapper.readValue(xmlString, DXMLRoot::class.java)
+        val sortNews = xmlRoot.news.element.filter { it.visible && (keyword == "" || it.keywords.contains(keyword)) }
             .sortedBy { it.date }
         if (sortNews.isNotEmpty()) {
             for (news in sortNews) {

@@ -14,6 +14,7 @@ dependencies {
     testImplementation(kotlin("test"))
     implementation("com.squareup.okhttp3:okhttp:3.10.0")
     implementation ("com.google.code.gson:gson:2.8.9")
+    implementation ("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.1")
 }
 
 tasks.test {

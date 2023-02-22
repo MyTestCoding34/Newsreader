@@ -10,12 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba149d42-ab9f-4fe9-982a-dcf67a2077a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Newsreader_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/presentation/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCParserJson.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCParserJson.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCRequestJson.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCRequestJson.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCRequestXml.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCRequestXml.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/presentation/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/presentation/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +46,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Interface" />
-        <option value="Kotlin Class" />
         <option value="Kotlin Data Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
