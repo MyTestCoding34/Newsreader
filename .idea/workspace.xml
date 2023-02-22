@@ -10,12 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba149d42-ab9f-4fe9-982a-dcf67a2077a5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/newsreader/domain/dll/ReplaceDate.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/newsreader/domain/interface/service/MyRequestAPI.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCParserJson.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCParserJson.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCRequestJson.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCRequestJson.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCRequestXml.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCRequestXml.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/presentation/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/presentation/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/data/MyRequestAPIImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/newsreader/data/service/MyRequestAPIImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/models/DJSONNews.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/newsreader/domain/models/DJSONNews.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/models/DJSONRoot.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/newsreader/domain/models/DJSONRoot.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/models/DReturnAnswerData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/newsreader/domain/models/DReturnAnswerData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/models/DXMLNews.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/newsreader/domain/models/DXMLNews.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/models/DXMLRoot.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/newsreader/domain/models/DXMLRoot.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/models/DXMLRootElement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/newsreader/domain/models/DXMLRootElement.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/models/EUrl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/newsreader/domain/models/EUrl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/models/MyRequestAPI.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/models/ReplaceDate.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCParserJson.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/newsreader/domain/usecase/UCParserJson.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCParserXml.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/newsreader/domain/usecase/UCParserXml.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCRequestJson.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/UCRequestXml.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/domain/usecase/Unite.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/presentation/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/romalapp/newsreader/presentation/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +59,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Interface" />
         <option value="Kotlin Data Class" />
+        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -85,6 +99,11 @@
       <recent name="E:\Projects\Newsreader\src\main\kotlin\ru\romalapp\presentation" />
       <recent name="E:\Projects\Newsreader\src\main\kotlin\ru\romalapp" />
     </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ru.romalapp.domain.dll" />
+      <recent name="ru.romalapp.domain.service" />
+      <recent name="ru.romalapp.data.service" />
+    </key>
   </component>
   <component name="RunManager" selected="Kotlin.Main">
     <configuration name="Newsreader [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -109,7 +128,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Main" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.romalapp.presentation.Main" />
+      <option name="MAIN_CLASS_NAME" value="ru.romalapp.newsreader.presentation.Main" />
       <module name="Newsreader.main" />
       <method v="2">
         <option name="Make" enabled="true" />

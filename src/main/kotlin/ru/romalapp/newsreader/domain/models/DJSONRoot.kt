@@ -1,4 +1,4 @@
-package ru.romalapp.domain.models
+package ru.romalapp.newsreader.domain.models
 
 data class DJSONRoot(
     val name: String,

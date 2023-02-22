@@ -26,5 +26,5 @@ kotlin {
 }
 
 application {
-    mainClass.set("ru.romalapp.presentation.Main")
+    mainClass.set("ru.romalapp.newsreader.presentation.Main")
 }

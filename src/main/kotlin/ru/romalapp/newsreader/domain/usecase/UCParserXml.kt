@@ -1,15 +1,22 @@
-package ru.romalapp.domain.usecase
-
+package ru.romalapp.newsreader.domain.usecase
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper
-import ru.romalapp.domain.models.DXMLRoot
-import java.text.SimpleDateFormat
-import java.util.*
+import com.google.gson.JsonParseException
+import ru.romalapp.newsreader.domain.dll.ReplaceDate
+import ru.romalapp.newsreader.domain.`interface`.usecase.UCParser
+import ru.romalapp.newsreader.domain.models.DXMLRoot
 
-class UCParserXml {
-    fun execute(xmlString: String, keyword: String = "") {
+class UCParserXml: UCParser {
+    override fun execute(dataString: String, keyword: String) {
         val mapper = XmlMapper()
-        val xmlRoot = mapper.readValue(xmlString, DXMLRoot::class.java)
+        val xmlRoot: DXMLRoot
+        try {
+            xmlRoot = mapper.readValue(dataString, DXMLRoot::class.java)
+        } catch (e: JsonParseException) {
+            println("Что то пошло не так! Крашнулся парсер XML!")
+            println()
+            return
+        }
         val sortNews = xmlRoot.news.element.filter { it.visible && (keyword == "" || it.keywords.contains(keyword)) }
             .sortedBy { it.date }
         if (sortNews.isNotEmpty()) {
@@ -17,7 +24,7 @@ class UCParserXml {
                 println("Id: ${news.id}")
                 println("Title: ${news.title}")
                 println("Description: ${news.description}")
-                println("Date: ${formatDate(news.date)}")
+                println("Date: ${ReplaceDate.execute(news.date)}")
                 println("Keywords: ${news.keywords.joinToString(", ")}")
                 println()
             }
@@ -25,12 +32,5 @@ class UCParserXml {
             println("По вашему запросу новостей не найдено!")
             println()
         }
-    }
-
-    private fun formatDate(date: String): String {
-        val inputDateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z", Locale.getDefault())
-        val outputDateFormat = SimpleDateFormat("dd MMMM yyyy HH:mm:ss", Locale.getDefault())
-        val inputDate = inputDateFormat.parse(date)
-        return outputDateFormat.format(inputDate)
     }
 }

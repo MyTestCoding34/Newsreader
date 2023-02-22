@@ -1,4 +1,4 @@
-package ru.romalapp.domain.models
+package ru.romalapp.newsreader.domain.models
 
 enum class EUrl (val enumUrl: String){
     JSON("https://api2.kiparo.com/static/it_news.json"),

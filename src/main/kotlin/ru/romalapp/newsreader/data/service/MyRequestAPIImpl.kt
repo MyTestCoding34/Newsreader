@@ -1,11 +1,11 @@
-package ru.romalapp.data
+package ru.romalapp.newsreader.data.service
 
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.util.concurrent.TimeUnit
-import ru.romalapp.domain.models.DReturnAnswerData
-import ru.romalapp.domain.models.EUrl
-import ru.romalapp.domain.models.MyRequestAPI
+import ru.romalapp.newsreader.domain.models.DReturnAnswerData
+import ru.romalapp.newsreader.domain.models.EUrl
+import ru.romalapp.newsreader.domain.`interface`.service.MyRequestAPI
 
 class MyRequestAPIImpl : MyRequestAPI {
 
